@@ -15,21 +15,28 @@
   
   /* Navbar */
   .navbar {
-    background-color: #333;
-    padding: 1rem;
-    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #000000;
+    padding: 22px;
+    font-size: 20px;
+    
   }
   
   .navbar a {
-    color: #f4f4f9;
-    margin: 0 1rem;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    margin-left: 1.5rem;
     transition: color 0.3s;
   }
   
   .navbar a:hover {
-    color: #ffd700;
+    color: #ff0015;
+    text-decoration:underline;
+    text-underline-offset: 9px;
   }
   
   /* Seção principal */
