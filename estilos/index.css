@@ -33,7 +33,7 @@ body {
   text-underline-offset: 9px;
 }
 
-
+@media (min-width: 1024px) {
 .section {
   padding: 50px;
   text-align: center;
@@ -151,5 +151,5 @@ body {
 
   #contato p {
       font-size: 0.9rem;
-  }
+}
 
