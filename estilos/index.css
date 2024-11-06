@@ -35,7 +35,7 @@ body {
 /* Navbar padrão para computador */
 .navbar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   position: fixed;
   top: 0;
