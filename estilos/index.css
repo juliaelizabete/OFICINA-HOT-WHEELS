@@ -7,32 +7,6 @@ body {
   background-color: #f0f0f0;
 }
 
-.navbar {
-  height: 45px;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  background-color: #000000;
-  padding: 22px;
-  font-size: 20px;
-  z-index: 10;
-}
-
-.navbar a {
-  margin-top: 10px;
-  color: #ffffff;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  transition: color 0.3s;
-}
-
-.navbar a:hover {
-  color: #00eeff;
-  text-decoration: underline;
-  text-underline-offset: 9px;
-}
-
 .section {
   padding: 50px;
   text-align: center;
@@ -58,7 +32,36 @@ body {
   text-align: center;
 }
 
-/* Seção Quem Somos */
+/* Navbar padrão para computador */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 15px 20px;
+  z-index: 10;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00eeff;
+  text-decoration: underline;
+}
+
+.navbar .menu-toggle {
+  display: none;
+}
+
+/* Estilos de conteúdo - Seção Quem Somos */
 #quem-somos {
   width: 700px;
   color: #333;
@@ -149,7 +152,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Responsividade para tablets */
+/* Responsividade para Tablets */
 @media (max-width: 1024px) {
   #inicio h1 {
     font-size: 4em;
@@ -174,40 +177,8 @@ body {
   }
 }
 
-/* Responsividade para dispositivos móveis */
+/* Responsividade para Celulares */
 @media (max-width: 768px) {
-  /* Navbar responsiva */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .navbar a {
-    margin: 5px 0;
-    font-size: 16px;
-    width: 100%;
-  }
-
-  .navbar-toggle {
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 24px;
-    margin-left: auto;
-    margin-top: 10px;
-  }
-
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-
   #inicio h1 {
     font-size: 2.5em;
   }
@@ -233,5 +204,45 @@ body {
 
   #servicos h2 {
     font-size: 1.2rem;
+  }
+
+  /* Navbar responsiva */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 5px 0;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  /* Menu toggle para celular */
+  .navbar .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffffff;
+    padding: 5px;
+  }
+
+  /* Checkbox para controle do menu */
+  #toggle-menu {
+    display: none;
+  }
+
+  /* Menu escondido até o checkbox ser marcado */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Menu visível quando o checkbox está marcado */
+  #toggle-menu:checked + .navbar-links {
+    display: flex;
   }
 }
